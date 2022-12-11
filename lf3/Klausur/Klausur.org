@@ -1,0 +1,277 @@
+# -*- eval: (add-hook 'after-save-hook #'org-html-export-to-html t t) -*-
+#+TITLE: LF3 Klausur
+#+AUTHOR: Keanu Daniel
+#+LANGUAGE: de
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
+#+LaTeX_HEADER: \usepackage{pdfpages}
+#+OPTIONS: html-postamble:nil num:nil
+
+* OSI Modell
+
++--------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+----------------------------+------------------+
+| OSI-Schicht                                | Hauptaufgabe                                       | Aufgaben                                                  | Protokolle                 | Einheiten        |
++--------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+----------------------------+------------------+
+| 7 Anwendungsschicht (Application Layer)    | Schnittstelle zum User                             | Datein-/ausgabe, Verbindung zwischen Anwendungsprogrammen | DHCP, DNS, FTP, HTTP/HTTPS | Daten            |
++--------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+                            +                  +
+| 6 Darstellungsschicht (Presentation Layer) | Umwandlung von Daten für eine korrekte Darstellung | Zeichencodierung                                          |                            |                  |
+|                                            |                                                    | Datenkompression                                          |                            |                  |
+|                                            |                                                    | Big-Endian                                                |                            |                  |
+|                                            |                                                    | Little-Endian                                             |                            |                  |
++--------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+                            +                  +
+| 5 Situngsschicht (Session Layer)           | Steuerung der Verbindung                           | regelt den Auf und Abbau einer Verbinung sowie deren      |                            |                  |
+|                                            |                                                    | Wiederherstellung nach Abbruch der Verbindung             |                            |                  |
++--------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+----------------------------+------------------+
+| 4 Transportschicht (Transport Layer)       | Zuordnung der Datenpackete zu den Anwendungen      | - Schnittstelle zwischen transport- und                   | TCP, UDP                   | TCP = Segmente   |
+|                                            |                                                    |   anwendungsorientierten Schichten                        |                            | UDP = Datagramme |
+|                                            |                                                    | - Zuordnung zu den Diensten der höheren Schichten         |                            |                  |
+|                                            |                                                    | - Flusssteuerung (End-to-End Flusskontrolle)              |                            |                  |
+|                                            |                                                    | - Sicherung der Übertragung (End-to-End Fehlerbehandlung) |                            |                  |
+|                                            |                                                    | - verbindungsorientierte, verbindungslose Protokolle      |                            |                  |
+|                                            |                                                    | - Ende-zu-Ende Verbindung zwischen Quelle und Ziel        |                            |                  |
++--------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+----------------------------+------------------+
+| 3 Vermittlungsschicht (Network Layer)      | Wegefindung im Netz                                | - logische Adressierung der Endgeräte                     | IP, ICMP                   | Pakete           |
+|                                            |                                                    | - Weiterleitung übermehrere Netzwerke (Routing)           |                            |                  |
+|                                            |                                                    | - Dienstgüteverwaltung                                    |                            |                  |
+|                                            |                                                    |                                                           |                            |                  |
+|                                            |                                                    |                                                           |                            |                  |
++--------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+----------------------------+------------------+
+| 2 Sicherungsschicht (Data Link Layer)      | Sichere Übertragung zwischen zwei benachbarten     | - Segmentierung in Frames und Prüfsummenbildung zur       | MAC, IEEE 802.3 Ethernet,  | Rahmen (Frames)  |
+|                                            | Netzknoten                                         |   Fehlererkennung                                         | IEEE 802.11 WLAN, TLAP     |                  |
+|                                            |                                                    | - Funktionen zur Fehlererkennung, Fehlerbehebung und      |                            |                  |
+|                                            |                                                    |   Datenflusskontrolle                                     |                            |                  |
+|                                            |                                                    | - Flusskontrolle - Anpassung der Sendgeschwindigkeit      |                            |                  |
+|                                            |                                                    |   bei unterschiedlich leistungsfähigen Kommunikations-    |                            |                  |
+|                                            |                                                    |   partnern                                                |                            |                  |
++--------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+----------------------------+------------------+
+| 1 Bitübertragungsschicht (Physical Layer)  | Spezifikation der Physikalischen Komponenten       | - Definition mechanischer, elektrischer und funktionaler  | Token Ring, ARCNET         | Bits, Symbole    |
+|                                            |                                                    |   Parameter für die physikalische Datenübertragung        |                            |                  |
+|                                            |                                                    | - Definition der Eigenschaften von Übertragungsmedien,    |                            |                  |
+|                                            |                                                    |   Stecker, Modulation und elektrische Darstellung der     |                            |                  |
+|                                            |                                                    |   Bits usw. (Das Übertragungsmedium selbst gehört nicht   |                            |                  |
+|                                            |                                                    |   zum OSI-Modell)                                         |                            |                  |
+|                                            |                                                    | - Übertragung der Bits über einen Kommunikationskanal     |                            |                  |
+|                                            |                                                    | - simplex- /duplex- Übertragung                           |                            |                  |
++--------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+----------------------------+------------------+
+
+*Schnittstelle* (interface): Die Schnittstelle legt fest, wie eine darüber liegende Schicht die Dienste nutzen kann.
+
+*Protokoll* (protocol): Die Protokolle einer Schicht werden von dieser Schicht benutzt, um die Dienste zu erbringen.
+
+* Topologien
+
+** Ring
+
+[[https://upload.wikimedia.org/wikipedia/commons/7/71/Netzwerktopologie_Ring.png]]
+
+| Vorteile                               | Nachteile                                                      |
+|----------------------------------------+----------------------------------------------------------------|
+| große Netzausdehnung                   | großer Verkabelungsaufwand                                     |
+| garantierte Übertragungsbandbreite     | hohe Störanfälligkeit                                          |
+| Verteilte Steuerung                    | Totalausfall des Netzes bei Ausfall des Koppelelements         |
+| Alle Stationen arbeiten als Verstärker | hoher Aufwand bei Erweiterung                                  |
+|                                        | bei steigender Anzahl von Stationen hohe Anzahl an Kollisionen |
+|                                        | hohe Störanfälligkeit des Mediums                              |
+|                                        | aufwändige Vernetzung                                          |
+
+** Stern
+
+[[https://upload.wikimedia.org/wikipedia/commons/5/53/Netzwerktopologie_Stern.png]]
+
+| Vorteile                    | Nachteile                                                            |
+|-----------------------------+----------------------------------------------------------------------|
+| einfache Erweiterbarkeit    | teure Komponenten                                                    |
+| hohe Übertragungsbandbreite | großer Verkabelungsaufwand                                           |
+| hohe Ausfallsicherheit      | Niedrige Übertragungsrate bei vielen Hosts wenn ein Hub benutzt wird |
+| hohe Übertragungssicherheit |                                                                      |
+
+** Bus
+
+[[https://upload.wikimedia.org/wikipedia/commons/3/32/Netzwerktopologie_Bus.png]]
+
+| Vorteile                                              | Nachteile                                    |
+|-------------------------------------------------------+----------------------------------------------|
+| geringe Kosten                                        | begrenzte Ausdehnung                         |
+| Ausfall eines Rechners ohne Auswirkungen auf das Netz | aufwändige Fehlersuche (z.B. bei Kabelbruch) |
+| günstige Komponenten                                  |                                              |
+
+* Strukturierte Verkabelung
+
+
+** Welche Gründe sprechen für den Einsatz von Lichtwellenleitern im Primärbereich?
+
+- Überwindung großer Entfernungen
+- Hohe Übertragungsraten
+- Abhörsicherheit
+- Potentialtrennung zwischen den Gebäuden (Glasfasern leiten keinen elektrischen Strom, Erdung von elektrischen Betriebsmittel)
+
+** Wo liegen die Vorteile beim Einsatz von Lichtwellenleitern?
+
+- Überwindung von großen Entfernungen
+- hohe Übertragungsraten
+- Zukunftssicherheit
+- geringe Störempfindlichkeit
+
+** Was versteht man unter einer Bedarfsverkabelung?
+
+Bei einer bedarfsorientierten Verkabelung bestimmt die Netztechnik die Art der Verkabelung (z.B. Analog-Telefon = 2-adriges Kabel,
+ISDN-Telefon = 4 - adriges Kabel, Netzwerk = 8 - adriges Kabel)
+
+** Was wird im Wesentlichen in der Norm EN DIN 50173 spezifiziert?
+
+- Struktur eines Gebäudeverkabelungssystems
+- Anforderungen an Kabel, Dosen und Komponenten
+- Messverfahren zur Überprüfung der Verkabelung
+
+** Welche Bereiche werden bei der strukturierten Verkabelung unterschieden?
+
+- Primär, Campus Backbone, gebäudeübergreifender Bereich
+- Sekundär, Building Backbone, Steigleitungsbereich (vertikal)
+- Tertiär, Horizontal Backbone, Etagenbereich (horizontal)
+
+** Was versteht man unter einer universellen Gebäudeverkabelung?
+
+Die universelle Gebäudeverkabelung definiert ein Konzept mit anwendungsneutralen Kommunikationskabeln.
+
+** Bei der Etagenverteilung spricht man von "Channel Link" und "Permanent Link". Was wird hier unterschieden?
+
+Channel Link = gesamte Übertragungsstrecke (= Installationsstrecke + Patchkabel <= 100 m)
+
+Permanent Link = Installationsstrecke (Wanddose <-> Patchfeld <= 90 m)
+
+** Man unterscheidet in der Netzwerktechnik passive und aktive Komponenten. Was sind passive und aktive Komponenten? 
+
+- passiv: Netzwerkkabel, Anschlussdosen, Patchfelder, Netzwerkschränke, Stecker, usw.
+- aktiv: Komponenten, die in die Signalübertragung eingreifen, besitzen elektronische Schaltkreise.
+
+** Welche Anforderungen werden an eine universelle Gebäudeverkabelung gestellt?
+
+- Dienste-Neutralität (Verwendung gängiger Standards für Sprache und Daten)
+- Investitionsschutz (Unterstützung zukünftiger Kommunikationstechniken)
+- Ausfallsicherheit
+- Flexibilität und Erweiterbarkeit
+
+** Bei Glasfaserverbindungen spricht man von einem konstanten Bandbreiten-Längenprodukt. Was ist darunter zu verstehen?
+
+Es ist eine wichtige Kenngröße bei Lichtwellenleitern
+
+Das Bandbreiten-Längenprodukt ist das Produkt aus der maximalen Bandbreite und der Länge eines Lichtwellenleiters. (B - l)
+
+** Welche verschiedenen Kategorien von Lichtwellenleitern können unterschieden werden?
+
+- Singlemode-Fasern
+- Multimode-Faser (Stufenindex-Faser)
+- Multimode-Faser (Gradientenindex-Faser)
+
+* IT-Mathe
+
+** Textaufgaben Lösung
+
+1. Sie müssen Ihr Datenarchiv von 4 TiB (16mal 256-GiB-Platten) aus Sicherheitsgründen von der Berufsakademie ins Forschungszentrum auslagern. Sie können dies entweder durch Transport der sechzehn Platten mit dem Auto bewerkstelligen, wobei Sie die 10,1 km in 12 min. zurücklegen, oder Sie können die Daten per Datennetz auf einer Glasfaser-Direktverbindung von 8,1 km Länge übertragen, die mit einer Transferrate von 5 Gbit/s betrieben wird. Welche Transferrate erreichen Sie mit dem Auto? Wie lange dauert die Übertragung auf der Glasfaser-Direktverbindung? Welche Variante bevorzugen Sie?
+
+Datenübertragung:\\
+$Zeit = \frac{4 * 1024 * 1024 * 1024 * 1024 * 8 bit}{5 * 1000 * 1000 * 1000} s = 7037 s$
+
+Auto:\\
+$Transferrate = \frac{4 * 1024 * 1024 * 1024 * 1024 * 8 Gbit}{720s * 1000 * 1000 * 1000} s = 48.87\frac{Gbit}{s}$
+
+2. [@2] Die maximale Bandbreite zum Download mit t-DSL beträgt 768 kbps. Die tatsächliche Ladegeschwindigkeit wird um 80 Prozent der maximalen Bandbreite reduziert. Wie lange dauert der Download einer 400 MiB großen Datei, die auf 20 Prozent ihres Datenbe- standes komprimiert wird? (Angabe in Stunden, Minuten und Sekunden)
+
+Bandbreite:\\
+\rightarrow 153.6 kbit/s
+
+Datenmenge:\\
+\rightarrow 80 MiB
+
+Die Übertragung dauert 1 Stunde, 12 Minuten, 50 Sekunden
+
+3. [@3] Die Übertragung von 5 Bildseiten, Dateigröße jeweils 40 MiB, soll nicht länger als 2 Stunden dauern. Wie viele ISDN-Kanäle mit jeweils 64 000 bit/s werden gebraucht?
+
+4 Kanäle
+
+4. [@4] Berechnung von Bilddatenmengen In eine Multimediaapplikation soll eine Diashow mit 12 Bildern eingebunden werden. Als Ausgangsmaterial stehen Farbfotos 15 × 10 cm2 zur Verfügung. Aus diesen Fotos werden für die Diashow quadratische Bilder mit einer Seitenlänge von 9,5 cm ausgeschnitten.
+
+a) Welche Datenmenge entsteht pro Originalbild, wenn mit 600 dpi und 24 Bit Farbtiefe
+gescannt wird?
+
+23,98 ≈ 24 MiB
+
+b) Welche Datenmenge hat ein quadratischer Bildausschnitt (Seitenlänge 9,5 cm), wenn
+die Farbauflösung beibehalten wird?
+
+14,4 MiB
+
+** Einheiten Tabelle
+
+| Einheit | Wert                           | Zahl      | Bemerkung |
+|---------+--------------------------------+-----------+-----------|
+| n       | $\frac{1}{1000 * 1000 * 1000}$ | $10^{-9}$ | nano      |
+| \mu     | $\frac{1}{1000 * 1000}$        | $10^{-6}$ | mikro     |
+| m       | $\frac{1}{1000}$               | $10^{-3}$ | milli     |
+| k       | 1000                           | $10^{3}$  | kilo      |
+| Ki      | 1024                           | $2^{10}$  | Kibi      |
+| M       | $1000 * 1000$                  | $10^{6}$  | Mega      |
+| Mi      | $1024 * 1024$                  | $2^{20}$  | Mebi      |
+| G       | $1000 * 1000 * 1000$           | $10^{9}$  | Giga      |
+| Gi      | $1024 * 1024 * 1024$           | $2^{30}$  | Gibi      |
+| T       | $1000 * 1000 * 1000 * 1000$    | $10^{12}$ | Tera      |
+| Ti      | $1024 * 1024 * 1024 * 1024$    | $2^{40}$  | Tebi      |
+
+*** Zahlen bis 31 in dual dezimal und hexadezimal
+
+| Dual   | dezimal | hexadezimal |
+|--------+---------+-------------|
+| 0 0000 |       0 |           0 |
+| 0 0001 |       1 |           1 |
+| 0 0010 |       2 |           2 |
+| 0 0011 |       3 |           3 |
+| 0 0100 |       4 |           4 |
+| 0 0101 |       5 |           5 |
+| 0 0110 |       6 |           6 |
+| 0 0111 |       7 |           7 |
+| 0 1000 |       8 |           8 |
+| 0 1001 |       9 |           9 |
+| 0 1010 |      10 |           A |
+| 0 1011 |      11 |           B |
+| 0 1100 |      12 |           C |
+| 0 1101 |       3 |           D |
+| 0 1110 |      14 |           E |
+| 0 1111 |      15 |           F |
+| 1 0000 |      16 |          10 |
+| 1 0001 |      17 |          11 |
+| 1 0010 |      18 |          12 |
+| 1 0011 |      19 |          13 |
+| 1 0100 |      20 |          14 |
+| 1 0101 |      21 |          15 |
+| 1 0110 |      22 |          16 |
+| 1 0111 |      23 |          17 |
+| 1 1000 |      24 |          18 |
+| 1 1001 |      25 |          19 |
+| 1 1010 |      26 |          1A |
+| 1 1011 |      27 |          1B |
+| 1 1100 |      28 |          1C |
+| 1 1101 |      29 |          1D |
+| 1 1110 |      30 |          1E |
+| 1 1111 |      31 |          1F |
+
+*** Dezimalzahl in Binärzahl umwandeln
+
+1. Die Zahl durch 2 dividieren
+2. Den Rest der Division notieren
+3. Falls das Ergebnis nicht 0 ist, Schritt 1 und 2 wiederholen
+
+Beispiel: 
+
+| Zahl      | Quotient | Rest |
+|-----------+----------+------|
+| $190 / 2$ |       95 |    0 |
+| $95 / 2$  |       47 |    1 |
+| $47 / 2$  |       23 |    1 |
+| $23 / 2$  |       11 |    1 |
+| $11 / 2$  |        5 |    1 |
+| $5 / 2$   |        2 |    1 |
+| $2 / 2$   |        1 |    0 |
+| $1 / 2$   |        0 |    1 |
+
+Die Dezimal zahl 190 ergibt daher die Binärzahl:
+
+$190_10 = 10111110_2$

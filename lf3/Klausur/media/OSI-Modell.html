@@ -1,0 +1,292 @@
+<p><strong>ISO-OSI-Referenzmodell</strong></p>
+<p>The International Standards Organization (ISO) proposal for the
+standardization of the various protocols used in computer networks
+(specifically those networks used to connect open systems) is called the
+Open Systems Interconnection Reference Model (1984), or simply the OSI
+model.</p>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 23%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Name</strong></th>
+<th><strong>Hauptaufgabe</strong></th>
+<th><strong>Aufgaben der einzelnen Schichten</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Anwendungsschicht</p>
+<p>Application Layer</p></td>
+<td><strong>Schnittstelle zum User</strong></td>
+<td><p>Datenein-/ausgabe</p>
+<p>Verbindung zwischen Anwendungsprogrammen</p></td>
+</tr>
+<tr class="even">
+<td><p>Darstellungsschicht</p>
+<p>Presentation Layer</p></td>
+<td><strong>Umwandlung von Daten für eine korrekte
+Darstellung</strong></td>
+<td><p>Umwandlung von Daten in verschiedene Codecs und Formate
+(Zeichencodierung)</p>
+<p>Datenkompression</p>
+<p>Big-Endian (z.B. RISC, Motorola, SUN, MSB-Darstellung)</p>
+<p>Little-Endian (z.B. Intel, LSB-Darstellung)</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="3"><strong>MSB -&gt; Byte3 Byte2 Byte1 Byte0 &lt;-
+LSB</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Speicheradresse</td>
+<td>Little Endian</td>
+<td>Big Endian</td>
+</tr>
+<tr class="even">
+<td>Basisadresse + 0</td>
+<td>Byte0</td>
+<td>Byte3</td>
+</tr>
+<tr class="odd">
+<td>Basisadresse + 1</td>
+<td>Byte1</td>
+<td>Byte2</td>
+</tr>
+<tr class="even">
+<td>Basisadresse + 2</td>
+<td>Byte2</td>
+<td>Byte1</td>
+</tr>
+<tr class="odd">
+<td>Basisadresse + 3</td>
+<td>Byte3</td>
+<td>Byte0</td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr class="odd">
+<td><p>Sitzungsschicht</p>
+<p>Session Layer</p></td>
+<td><strong>Steuerung der Verbindungen</strong></td>
+<td>regelt den Auf- und Abbau von Verbindungen sowie deren
+Wiederherstellung nach Abbruch einer Verbindung</td>
+</tr>
+<tr class="even">
+<td><p>Transportschicht</p>
+<p>Transport Layer</p></td>
+<td><strong>Zuordnung der Datenpakete zu den Anwendungen</strong></td>
+<td><p>Schnittstelle zwischen transport- und anwendungsorientierten
+Schichten</p>
+<p>Zuordnung zu den Diensten der höheren Schichten</p>
+<p>Flusssteuerung (End-to-End Flusskontrolle)</p>
+<p>Sicherung der Übertragung (End-to-End Fehlerbehandlung)</p>
+<p>verbindungsorientierte, verbindungslose Protokolle</p>
+<p>Ende-zu-Ende Verbindung zwischen Quelle und Ziel</p></td>
+</tr>
+<tr class="odd">
+<td><p>Vermittlungsschicht</p>
+<p>Network Layer</p></td>
+<td><strong>Wegefindung im Netz</strong></td>
+<td><p>logische Adressierung der Endgeräte</p>
+<p>Weiterleitung über mehrere Netzwerke (Routing)</p>
+<p>Dienstgüteverwaltung</p></td>
+</tr>
+<tr class="even">
+<td><p>Sicherungsschicht</p>
+<p>Data Link Layer</p></td>
+<td><strong>Sichere Übertragung zwischen zwei benachbarten
+Netzknoten</strong></td>
+<td><p>Segmentierung in Frames und Prüfsummenbildung zur
+Fehlererkennung</p>
+<p>Funktionen zur Fehlererkennung, Fehlerbehebung und
+Datenflusskontrolle</p>
+<p>Teilschichten</p>
+<p>MAC (Steuerung des Zugriffs auf das Übertragungsmedium bzw. den
+Übertragungskanal)</p>
+<p>LLC (Verwaltung der logischen Verbindung, Fehlerkontrolle und
+Flusssteuerung, Aufteilung in Frames)</p>
+<p>Flusskontrolle – Anpassung der Sendgeschwindigkeit bei
+unterschiedlich leistungsfähigen Kommunikationspartnern</p></td>
+</tr>
+<tr class="odd">
+<td><p>Bitübertragungsschicht</p>
+<p>Physical Layer</p></td>
+<td><strong>Spezifikation der physikalischen Komponenten</strong></td>
+<td><p>Definition mechanischer, elektrischer und funktionaler Parameter
+für die physikalische Datenübertragung</p>
+<p>Definition der Eigenschaften von Übertragungsmedien, Steckern,
+Modulation und elektrische Darstellung der Bits usw. (Das
+Übertragungsmedium selbst gehört nicht zum OSI-Modell)</p>
+<p>Übertragung der Bits über einen Kommunikationskanal</p>
+<p>simplex- /duplex-Übertragung</p></td>
+</tr>
+</tbody>
+</table>
+<p>Im OSI-Modell werden transportorientierte und anwendungsorientierte
+Schichten unterschieden. Wir unterscheiden zwischen horizontaler und
+vertikaler Kommunikation.</p>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>Quelle: Kommunikationnetze I – (TI), RWTH Aachen</p>
+<p>Das OSI-Modell basiert auf einer Trennung von Dienst, Schnittstelle
+und Protokoll:</p>
+<p>Dienst (service): Der Dienst beschreibt, was die Schicht macht.</p>
+<p>Schnittstelle (interface): Die Schnittstelle legt fest, wie eine
+darüber liegende Schicht die Dienste nutzen kann.</p>
+<p>Protokoll (protocol): Die Protokolle einer Schicht werden von dieser
+Schicht benutzt, um die Dienste zu erbringen.</p></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>Quelle: Informatik Fortbildung "Kommunikation in Rechnernetzen",
+Dr. Michael Schlemmer, November 2011</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 48%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sender</th>
+<th>-&gt; Nachricht -&gt;</th>
+<th>Empfänger</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Anwendung</td>
+<td>-&gt; Übertragung von Daten zwischen Anwendungsprozessen -&gt;</td>
+<td>Anwendung</td>
+</tr>
+<tr class="even">
+<td>Transport</td>
+<td>-&gt; Transport von Datenpaketen zwischen zwei Prozessen -&gt;</td>
+<td>Transport</td>
+</tr>
+<tr class="odd">
+<td>Vermittlung</td>
+<td>-&gt; Weiterleitung von Datenpaketen zwischen entfernten Hosts
+-&gt;</td>
+<td>Vermittlung</td>
+</tr>
+<tr class="even">
+<td>Sicherung</td>
+<td>-&gt; Übertragung von Datenpaketen zwischen benachbarten Hosts
+-&gt;</td>
+<td>Sicherung</td>
+</tr>
+<tr class="odd">
+<td>Bitübertragung</td>
+<td>-&gt; Übertragung von Bitfolgen zwischen zwei Schnittstellen
+-&gt;</td>
+<td>Bitübertragung</td>
+</tr>
+</tbody>
+</table></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>Quelle:
+https://www.routemybrain.com/introduction-to-tcpip-model-dod-model-%e2%80%93-part-1/
+(09/2017)</p>
+<p>Introduction To TCP/IP Model ( DOD Model) – Part 1<br />
+The <strong>TCP/IP</strong> model was created by <strong>Department Of
+Defence(DOD)</strong>.If you have read my previous posts about the OSI
+model introduction then you can see that the OSI model has <strong>7
+layers</strong> whereas in the TCP/IP model there are only <strong>4
+layers</strong>.</p>
+<p>The 4 layers in the TCP/IP model are</p>
+<ul>
+<li><p>Application</p></li>
+<li><p>Host to Host</p></li>
+<li><p>Internet</p></li>
+<li><p>Network Access</p></li>
+</ul>
+<p><strong>1.)Application layer</strong>-This layer is equivalent to the
+top 3 three layers of the OSI model .This layer is responsible for
+defining node to node application communication and user interfaces.The
+protocols used are tftp,snmp,dns etc.</p>
+<p><strong>2.)Host to Host</strong>-This performs the same functionality
+as that of the transport layer in the osi model.It is responsible for
+creating end to end communications.It also checks data integrity and
+maintains packet sequencing.The protocols used are TCP and UDP.</p>
+<p><strong>3.)Internet</strong>-Now this layer’s functionality
+corresponds to network layer i.e. it takes care of addressing and
+routing of packets.The protocols used are IP,ICMP,ARP,RARP</p>
+<p><strong>4.)Network Access</strong>-This is the physical layer it is
+composite of DLL(data link layer) and the physical layer .It defines
+physical transmission norms for transmission of data .Technology used
+Ethernet,FDDI, ATM,Token Ring etc.</p></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p>Quelle: http://www.ethermanage.com/ethernet/ethername.html
+(09/2017)</p>
+<h1 id="why-is-it-called-ethernet">Why is it called Ethernet?</h1>
+<p>The following excerpt from <a
+href="http://www.ethermanage.com/ethernet/edg/edg.html"><strong><u>Ethernet:
+The Definitive Guide</u></strong></a> (O'Reilly and Associates, 2000),
+explains where the name "Ethernet" comes from:</p>
+<h3 id="invention-of-ethernet">"Invention of Ethernet</h3>
+<p>In late 1972, Metcalfe and his Xerox PARC colleagues developed the
+first experimental Ethernet system to interconnect the Xerox Alto, a
+personal workstation with a graphical user interface. The experimental
+Ethernet was used to link Altos to one another, and to servers and laser
+printers. The signal clock for the experimental Ethernet interface was
+derived from the Alto's system clock, which resulted in a data
+transmission rate on the experimental Ethernet of 2.94 Mbps.</p>
+<p>Metcalfe's first experimental network was called the Alto Aloha
+Network. In 1973 Metcalfe changed the name to "Ethernet," to make it
+clear that the system could support any computer--not just Altos--and to
+point out that his new network mechanisms had evolved well beyond the
+Aloha system. He chose to base the name on the word "ether" as a way of
+describing an essential feature of the system: the physical medium
+(i.e., a cable) carries bits to all stations, much the same way that the
+old "luminiferous ether" was once thought to propagate electromagnetic
+waves through space. Thus, Ethernet was born.”</p></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>

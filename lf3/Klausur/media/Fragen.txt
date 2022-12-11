@@ -1,0 +1,43 @@
+Fragetext
+
+Welche Gründe sprechen für den Einsatz von Lichtwellenleitern im Primärbereich?
+--
+Fragetext
+
+Wo liegen die Vorteile beim Einsatz von Lichtwellenleitern?
+--
+Fragetext
+
+Was versteht man unter einer Bedarfsverkabelung?
+--
+Fragetext
+
+Was wird im Wesentlichen in der Norm EN DIN 50173 spezifiziert?
+--
+Fragetext
+
+Welche Bereiche werden bei der strukturierten Verkabelung unterschieden?
+--
+Fragetext
+
+Was versteht man unter einer universellen Gebäudeverkabelung?
+--
+Fragetext
+
+Bei der Etagenverteilung spricht man von "Channel Link" und "Permanent Link". Was wird hier unterschieden?
+--
+Fragetext
+
+Man unterscheidet in der Netzwerktechnik passive und aktive Komponenten. Was sind passive und aktive Komponenten? 
+--
+Fragetext
+
+Welche Anforderungen werden an eine universelle Gebäudeverkabelung gestellt?
+--
+Fragetext
+
+Bei Glasfaserverbindungen spricht man von einem konstanten Bandbreiten-Längenprodukt. Was ist darunter zu verstehen?
+--
+Fragetext
+
+Welche verschiedenen Kategorien von Lichtwellenleitern können unterschieden werden?
