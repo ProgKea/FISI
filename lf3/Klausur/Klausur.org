@@ -272,4 +272,4 @@ Beispiel:
 
 Die Dezimal zahl 190 ergibt daher die Binärzahl:
 
-$190_10 = 10111110_2$
+$190_{10} = 10111110_2$
