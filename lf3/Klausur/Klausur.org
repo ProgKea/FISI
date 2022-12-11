@@ -1,9 +1,7 @@
 # -*- eval: (add-hook 'after-save-hook #'org-html-export-to-html t t) -*-
 #+TITLE: LF3 Klausur
-#+AUTHOR: Keanu Daniel
 #+LANGUAGE: de
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
-#+LaTeX_HEADER: \usepackage{pdfpages}
 #+OPTIONS: html-postamble:nil num:nil
 
 * OSI Modell

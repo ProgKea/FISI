@@ -1,0 +1,7 @@
+# -*- eval: (add-hook 'after-save-hook #'org-html-export-to-html t t) -*-
+#+TITLE: Index FISI
+#+Language: de
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
+#+OPTIONS: html-postamble:nil num:nil
+
+[[./lf3/Klausur/Klausur.html]]
