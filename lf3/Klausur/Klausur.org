@@ -16,7 +16,7 @@
 |                                            |                                                    | Big-Endian                                                |                            |                  |
 |                                            |                                                    | Little-Endian                                             |                            |                  |
 +--------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+                            +                  +
-| 5 Situngsschicht (Session Layer)           | Steuerung der Verbindung                           | regelt den Auf und Abbau einer Verbinung sowie deren      |                            |                  |
+| 5 Sitzungsschicht (Session Layer)          | Steuerung der Verbindung                           | regelt den Auf und Abbau einer Verbinung sowie deren      |                            |                  |
 |                                            |                                                    | Wiederherstellung nach Abbruch der Verbindung             |                            |                  |
 +--------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+----------------------------+------------------+
 | 4 Transportschicht (Transport Layer)       | Zuordnung der Datenpackete zu den Anwendungen      | - Schnittstelle zwischen transport- und                   | TCP, UDP                   | TCP = Segmente   |
