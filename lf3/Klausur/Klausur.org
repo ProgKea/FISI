@@ -28,7 +28,7 @@
 |                                            |                                                    | - Ende-zu-Ende Verbindung zwischen Quelle und Ziel        |                            |                  |
 +--------------------------------------------+----------------------------------------------------+-----------------------------------------------------------+----------------------------+------------------+
 | 3 Vermittlungsschicht (Network Layer)      | Wegefindung im Netz                                | - logische Adressierung der Endgeräte                     | IP, ICMP                   | Pakete           |
-|                                            |                                                    | - Weiterleitung übermehrere Netzwerke (Routing)           |                            |                  |
+|                                            |                                                    | - Weiterleitung über mehrere Netzwerke (Routing)          |                            |                  |
 |                                            |                                                    | - Dienstgüteverwaltung                                    |                            |                  |
 |                                            |                                                    |                                                           |                            |                  |
 |                                            |                                                    |                                                           |                            |                  |
@@ -134,7 +134,7 @@ Die universelle Gebäudeverkabelung definiert ein Konzept mit anwendungsneutrale
 
 Channel Link = gesamte Übertragungsstrecke (= Installationsstrecke + Patchkabel <= 100 m)
 
-Permanent Link = Installationsstrecke (Wanddose <-> Patchfeld <= 90 m)
+Permanent Link = Installationsstrecke (Wanddose \leftrightarrow Patchfeld <= 90 m)
 
 ** Man unterscheidet in der Netzwerktechnik passive und aktive Komponenten. Was sind passive und aktive Komponenten? 
 
