@@ -1,0 +1,571 @@
+# -*- eval: (add-hook 'after-save-hook #'org-html-export-to-html t t) -*-
+#+TITLE: LF2 Klausur
+#+LANGUAGE: de
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
+#+OPTIONS: html-postamble:nil num:nil
+
+** S.100 Aufgabe 3
+
+| 1.  | Mainboard (Motherboard)       |
+|-----+-------------------------------|
+| 2.  | CPU                           |
+| 3.  | RAM                           |
+| 4.  | ROM                           |
+| 5.  | BIOS                          |
+| 6.  | GUI                           |
+| 7.  | Taktgeber (Clock)             |
+| 8.  | OS (Operating System)         |
+| 9.  | VMM (Virtual Machine Monitor) |
+| 10. | EEPROM                        |
+
+** S. 100 Aufgabe 4
+
+| A. | PCIe            |
+|----+-----------------|
+| B. | I/O-Panel       |
+| C. | CPU-Sockel      |
+| D. | RAM-Slots       |
+| E. | SATA-Anschlüsse |
+
+Was ist ein CMOS?
+
+Was ist ein RISC-Prozessor?
+
+Unterschied SAS und SATA.
+
+** S.103 Aufgabe 6
+
+1. RAM
+
+2. EPROM
+
+3. UEFI
+
+4. GUI
+
+5. Clock
+
+6. VMM
+
+7. Chipsatz
+
+8. Formfaktor
+
+9. CPU-Sockel
+
+10. ATX
+
+11. Cache
+
+12. GPU
+
+13. Kern(e) / Core(s)
+
+14. Intel
+
+15. AMD
+
+16. ARM / HP
+
+17. ALU
+
+18. nm (Nanometer)
+
+19. Fax / Bus
+
+20. Hertz (Hz)
+
+21. Boost
+
+22. TDP (thermal design power)
+
+23. Kühler
+
+24. GPGPU
+
+Aufgabe 6.2
+
+1. D
+
+2. F
+
+3. E
+
+4. A
+
+5. C
+
+6. B
+
+Aufgabe 8.2
+
+A: PS/2
+
+B: USB 2.0
+
+C:Hdmi
+
+D:Display Port
+
+E:VgA
+
+F: DVI
+
+G: USB 3.0
+
+H: RJ 45
+
+I:Aux / Audio
+
+Aufgabe 8.3 a
+
+Ampere umwandeln = 120mA=0.12A
+
+100mA=0.1A
+
+140mA=0.14A
+
+60mA= 0.06A
+
+P=i * u
+
+P=Leistung(Watt)
+
+I= Stromstärke(Ampere)
+
+U= Spannung(Volt)
+
+P= 0.52* 5
+
+P=2.6 W
+
+Aufgabe 8.3 b
+
+Aktiven USB-Hub anschließen.
+
+Aufgabe 9.1
+
+Office Rechner Tower= Intern,300Watt, Aktiv
+
+Office Rechner, Notebook Slim=Extern, 300Watt, Passiv
+
+High-End-PC Desktop= Intern, 650Watt, Aktiv
+
+High-End-Notebook= Extern, 300 Watt, Passiv
+
+Aufgabe 10 .3 a
+
+1. 3.5“
+
+2. HDD SSD
+
+3. Extern, Intern
+
+4. Hybrid
+
+5. M.2, SATA, USB, PCI-e, SAS
+
+6. Western digital blue 500gb m.2 ssd
+
+7. Western digital black 2TB nvme ssd
+
+** S.109 Aufgabe 10.3 b
+
+Übersprungen
+
+10.3 c
+
+Überspringen
+
+** S.110 11.1
+
+1. Falsch
+
+2. Falsch
+
+3. Richtig
+
+4. Falsch
+
+5. Richtig
+
+6. Falsch
+
+7. Richtig
+
+8. Richtig
+
+9. Richtig
+
+10. Richtig
+
+11. Falsch
+
+12. Falsch
+
+13. Richtig
+
+14. Richtig
+
+15. Richtig
+
+16. Falsch
+
+11.2
+
+Reihe 1: VGA, miniDVI, HDMI, Audio, Optical audio
+
+Reihe 2: DVI-I, DVI-D, Thunderbolt, Displayport, miniDP
+
+** S. 111 12.1
+
+1 = C
+
+2 = B
+
+3 = A
+
+12.2
+
+1) Hotkey/shortcut
+
+2) USB
+
+3) Touchpad
+
+4) Handballenauflage (Wrist rest)
+
+5) Grafiktablet
+
+#+begin_quote
+13.1
+
+#+end_quote
+
+1) 24-27 Zoll
+
+2) Full HD 1920 x 1080
+
+3) 1ms
+
+4) VA Panel
+
+5) IPS-Panel
+
+6) 35°
+
+7) HDMI, Displayport
+
+8) Energystar label
+
+9) DP
+
+** S.112 13.2
+
+Curved screen: Gebogenes Display
+
+Panel: Farb & Kontrast Wiedergabe
+
+Tilt-Eigenschaft: Neigungswinkel
+
+Swivel-Eigenschaft: Waagerecht Bildschirm drehen
+
+Pivot-Eigenschaft: Monitor in Hochformat setzen
+
+MHL-Port: Schnittstelle für Mobilgeräte
+
+VESA: Standard für Befestigungsmöglichkeiten
+
+13.4
+
+| Eher gut      | Eher schlecht            |
+|---------------+--------------------------|
+| 30-150W       | Über 150W                |
+| 1-5ms         | Über 5ms                 |
+| Ab 1080p      | Unter 1080p              |
+| 700:1         | Unter 700:1              |
+| IPS-Panel     | VA-Panel                 |
+| 250-300 cd/m² | Alles über 250-300 cd/m² |
+
+** S.100 Aufgabe 3
+
+| 1.  | Mainboard (Motherboard)       |
+|-----+-------------------------------|
+| 2.  | CPU                           |
+| 3.  | RAM                           |
+| 4.  | ROM                           |
+| 5.  | BIOS                          |
+| 6.  | GUI                           |
+| 7.  | Taktgeber (Clock)             |
+| 8.  | OS (Operating System)         |
+| 9.  | VMM (Virtual Machine Monitor) |
+| 10. | EEPROM                        |
+
+** S. 100 Aufgabe 4
+
+| A. | PCIe            |
+|----+-----------------|
+| B. | I/O-Panel       |
+| C. | CPU-Sockel      |
+| D. | RAM-Slots       |
+| E. | SATA-Anschlüsse |
+
+Was ist ein CMOS?
+
+Was ist ein RISC-Prozessor?
+
+Unterschied SAS und SATA.
+
+** S.103 Aufgabe 6
+
+1. RAM
+
+2. EPROM
+
+3. UEFI
+
+4. GUI
+
+5. Clock
+
+6. VMM
+
+7. Chipsatz
+
+8. Formfaktor
+
+9. CPU-Sockel
+
+10. ATX
+
+11. Cache
+
+12. GPU
+
+13. Kern(e) / Core(s)
+
+14. Intel
+
+15. AMD
+
+16. ARM / HP
+
+17. ALU
+
+18. nm (Nanometer)
+
+19. Fax / Bus
+
+20. Hertz (Hz)
+
+21. Boost
+
+22. TDP (thermal design power)
+
+23. Kühler
+
+24. GPGPU
+
+Aufgabe 6.2
+
+1. D
+
+2. F
+
+3. E
+
+4. A
+
+5. C
+
+6. B
+
+Aufgabe 8.2
+
+A: PS/2
+
+B: USB 2.0
+
+C:Hdmi
+
+D:Display Port
+
+E:VgA
+
+F: DVI
+
+G: USB 3.0
+
+H: RJ 45
+
+I:Aux / Audio
+
+Aufgabe 8.3 a
+
+Ampere umwandeln = 120mA=0.12A
+
+100mA=0.1A
+
+140mA=0.14A
+
+60mA= 0.06A
+
+P=i * u
+
+P=Leistung(Watt)
+
+I= Stromstärke(Ampere)
+
+U= Spannung(Volt)
+
+P= 0.52* 5
+
+P=2.6 W
+
+Aufgabe 8.3 b
+
+Aktiven USB-Hub anschließen.
+
+Aufgabe 9.1
+
+Office Rechner Tower= Intern,300Watt, Aktiv
+
+Office Rechner, Notebook Slim=Extern, 300Watt, Passiv
+
+High-End-PC Desktop= Intern, 650Watt, Aktiv
+
+High-End-Notebook= Extern, 300 Watt, Passiv
+
+Aufgabe 10 .3 a
+
+1. 3.5“
+
+2. HDD SSD
+
+3. Extern, Intern
+
+4. Hybrid
+
+5. M.2, SATA, USB, PCI-e, SAS
+
+6. Western digital blue 500gb m.2 ssd
+
+7. Western digital black 2TB nvme ssd
+
+** S.109 Aufgabe 10.3 b
+
+Übersprungen
+
+10.3 c
+
+Überspringen
+
+** S.110 11.1
+
+1. Falsch
+
+2. Falsch
+
+3. Richtig
+
+4. Falsch
+
+5. Richtig
+
+6. Falsch
+
+7. Richtig
+
+8. Richtig
+
+9. Richtig
+
+10. Richtig
+
+11. Falsch
+
+12. Falsch
+
+13. Richtig
+
+14. Richtig
+
+15. Richtig
+
+16. Falsch
+
+11.2
+
+Reihe 1: VGA, miniDVI, HDMI, Audio, Optical audio
+
+Reihe 2: DVI-I, DVI-D, Thunderbolt, Displayport, miniDP
+
+** S. 111 12.1
+
+1 = C
+
+2 = B
+
+3 = A
+
+12.2
+
+1) Hotkey/shortcut
+
+2) USB
+
+3) Touchpad
+
+4) Handballenauflage (Wrist rest)
+
+5) Grafiktablet
+
+#+begin_quote
+13.1
+
+#+end_quote
+
+1) 24-27 Zoll
+
+2) Full HD 1920 x 1080
+
+3) 1ms
+
+4) VA Panel
+
+5) IPS-Panel
+
+6) 35°
+
+7) HDMI, Displayport
+
+8) Energystar label
+
+9) DP
+
+** S.112 13.2
+
+Curved screen: Gebogenes Display
+
+Panel: Farb & Kontrast Wiedergabe
+
+Tilt-Eigenschaft: Neigungswinkel
+
+Swivel-Eigenschaft: Waagerecht Bildschirm drehen
+
+Pivot-Eigenschaft: Monitor in Hochformat setzen
+
+MHL-Port: Schnittstelle für Mobilgeräte
+
+VESA: Standard für Befestigungsmöglichkeiten
+
+13.4
+
+| Eher gut      | Eher schlecht            |
+|---------------+--------------------------|
+| 30-150W       | Über 150W                |
+| 1-5ms         | Über 5ms                 |
+| Ab 1080p      | Unter 1080p              |
+| 700:1         | Unter 700:1              |
+| IPS-Panel     | VA-Panel                 |
+| 250-300 cd/m² | Alles über 250-300 cd/m² |

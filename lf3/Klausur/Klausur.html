@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
 <head>
-<!-- 2022-12-12 Mon 04:47 -->
+<!-- 2022-12-17 Sat 10:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>LF3 Klausur</title>
@@ -193,27 +193,38 @@
   .org-svg { }
 </style>
 <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
@@ -222,36 +233,36 @@
 <h2>Inhaltsverzeichnis</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org137c15c">OSI Modell</a></li>
-<li><a href="#orgbb39cb5">Topologien</a>
+<li><a href="#orgabbbddb">OSI Modell</a></li>
+<li><a href="#orge9f0ddf">Topologien</a>
 <ul>
-<li><a href="#org4fa282d">Ring</a></li>
-<li><a href="#org527e07c">Stern</a></li>
-<li><a href="#org677974b">Bus</a></li>
+<li><a href="#org841c55e">Ring</a></li>
+<li><a href="#org989361d">Stern</a></li>
+<li><a href="#orgbead497">Bus</a></li>
 </ul>
 </li>
-<li><a href="#orge5c2a94">Strukturierte Verkabelung</a>
+<li><a href="#org78bb53c">Strukturierte Verkabelung</a>
 <ul>
-<li><a href="#orgfd64c68">Welche Gründe sprechen für den Einsatz von Lichtwellenleitern im Primärbereich?</a></li>
-<li><a href="#org4f21ddd">Wo liegen die Vorteile beim Einsatz von Lichtwellenleitern?</a></li>
-<li><a href="#orgd553335">Was versteht man unter einer Bedarfsverkabelung?</a></li>
-<li><a href="#orgf8aa8e7">Was wird im Wesentlichen in der Norm EN DIN 50173 spezifiziert?</a></li>
-<li><a href="#orgf71e4a2">Welche Bereiche werden bei der strukturierten Verkabelung unterschieden?</a></li>
-<li><a href="#org593498e">Was versteht man unter einer universellen Gebäudeverkabelung?</a></li>
-<li><a href="#orgf39cd14">Bei der Etagenverteilung spricht man von "Channel Link" und "Permanent Link". Was wird hier unterschieden?</a></li>
-<li><a href="#org7764a2c">Man unterscheidet in der Netzwerktechnik passive und aktive Komponenten. Was sind passive und aktive Komponenten?</a></li>
-<li><a href="#orge743420">Welche Anforderungen werden an eine universelle Gebäudeverkabelung gestellt?</a></li>
-<li><a href="#orgcb6e4cc">Bei Glasfaserverbindungen spricht man von einem konstanten Bandbreiten-Längenprodukt. Was ist darunter zu verstehen?</a></li>
-<li><a href="#org3d16652">Welche verschiedenen Kategorien von Lichtwellenleitern können unterschieden werden?</a></li>
+<li><a href="#orga8594be">Welche Gründe sprechen für den Einsatz von Lichtwellenleitern im Primärbereich?</a></li>
+<li><a href="#orgdfc9e97">Wo liegen die Vorteile beim Einsatz von Lichtwellenleitern?</a></li>
+<li><a href="#org9d319ec">Was versteht man unter einer Bedarfsverkabelung?</a></li>
+<li><a href="#orgf5f40ce">Was wird im Wesentlichen in der Norm EN DIN 50173 spezifiziert?</a></li>
+<li><a href="#orgb20f55b">Welche Bereiche werden bei der strukturierten Verkabelung unterschieden?</a></li>
+<li><a href="#orgc283032">Was versteht man unter einer universellen Gebäudeverkabelung?</a></li>
+<li><a href="#org92c3031">Bei der Etagenverteilung spricht man von "Channel Link" und "Permanent Link". Was wird hier unterschieden?</a></li>
+<li><a href="#org46324c4">Man unterscheidet in der Netzwerktechnik passive und aktive Komponenten. Was sind passive und aktive Komponenten?</a></li>
+<li><a href="#org9691cd0">Welche Anforderungen werden an eine universelle Gebäudeverkabelung gestellt?</a></li>
+<li><a href="#orga85edcc">Bei Glasfaserverbindungen spricht man von einem konstanten Bandbreiten-Längenprodukt. Was ist darunter zu verstehen?</a></li>
+<li><a href="#org6848932">Welche verschiedenen Kategorien von Lichtwellenleitern können unterschieden werden?</a></li>
 </ul>
 </li>
-<li><a href="#org8e1b236">IT-Mathe</a>
+<li><a href="#org194fd98">IT-Mathe</a>
 <ul>
-<li><a href="#org2481457">Textaufgaben Lösung</a></li>
-<li><a href="#org0b90268">Einheiten Tabelle</a>
+<li><a href="#orgc77fdd5">Textaufgaben Lösung</a></li>
+<li><a href="#org27a0ec0">Einheiten Tabelle</a>
 <ul>
-<li><a href="#org8fed26a">Zahlen bis 31 in dual dezimal und hexadezimal</a></li>
-<li><a href="#org08450f6">Dezimalzahl in Binärzahl umwandeln</a></li>
+<li><a href="#orgab84d99">Zahlen bis 31 in dual dezimal und hexadezimal</a></li>
+<li><a href="#org0e98ca5">Dezimalzahl in Binärzahl umwandeln</a></li>
 </ul>
 </li>
 </ul>
@@ -260,10 +271,10 @@
 </div>
 </div>
 
-<div id="outline-container-org137c15c" class="outline-2">
-<h2 id="org137c15c">OSI Modell</h2>
-<div class="outline-text-2" id="text-org137c15c">
-<!-- This HTML table template is generated by emacs 28.2 -->
+<div id="outline-container-orgabbbddb" class="outline-2">
+<h2 id="orgabbbddb">OSI Modell</h2>
+<div class="outline-text-2" id="text-orgabbbddb">
+<!-- This HTML table template is generated by emacs 29.0.60 -->
 <table border="1">
   <tr>
     <td align="left" valign="top">
@@ -544,15 +555,15 @@
 </div>
 </div>
 
-<div id="outline-container-orgbb39cb5" class="outline-2">
-<h2 id="orgbb39cb5">Topologien</h2>
-<div class="outline-text-2" id="text-orgbb39cb5">
+<div id="outline-container-orge9f0ddf" class="outline-2">
+<h2 id="orge9f0ddf">Topologien</h2>
+<div class="outline-text-2" id="text-orge9f0ddf">
 </div>
-<div id="outline-container-org4fa282d" class="outline-3">
-<h3 id="org4fa282d">Ring</h3>
-<div class="outline-text-3" id="text-org4fa282d">
+<div id="outline-container-org841c55e" class="outline-3">
+<h3 id="org841c55e">Ring</h3>
+<div class="outline-text-3" id="text-org841c55e">
 
-<div id="org5e792b5" class="figure">
+<div id="org7f30d03" class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Netzwerktopologie_Ring.png" alt="Netzwerktopologie_Ring.png" />
 </p>
 </div>
@@ -611,11 +622,11 @@
 </div>
 </div>
 
-<div id="outline-container-org527e07c" class="outline-3">
-<h3 id="org527e07c">Stern</h3>
-<div class="outline-text-3" id="text-org527e07c">
+<div id="outline-container-org989361d" class="outline-3">
+<h3 id="org989361d">Stern</h3>
+<div class="outline-text-3" id="text-org989361d">
 
-<div id="org09e108f" class="figure">
+<div id="org19e2cca" class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Netzwerktopologie_Stern.png" alt="Netzwerktopologie_Stern.png" />
 </p>
 </div>
@@ -659,11 +670,11 @@
 </div>
 </div>
 
-<div id="outline-container-org677974b" class="outline-3">
-<h3 id="org677974b">Bus</h3>
-<div class="outline-text-3" id="text-org677974b">
+<div id="outline-container-orgbead497" class="outline-3">
+<h3 id="orgbead497">Bus</h3>
+<div class="outline-text-3" id="text-orgbead497">
 
-<div id="orge696852" class="figure">
+<div id="orgc7e7601" class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Netzwerktopologie_Bus.png" alt="Netzwerktopologie_Bus.png" />
 </p>
 </div>
@@ -703,13 +714,13 @@
 </div>
 </div>
 
-<div id="outline-container-orge5c2a94" class="outline-2">
-<h2 id="orge5c2a94">Strukturierte Verkabelung</h2>
-<div class="outline-text-2" id="text-orge5c2a94">
+<div id="outline-container-org78bb53c" class="outline-2">
+<h2 id="org78bb53c">Strukturierte Verkabelung</h2>
+<div class="outline-text-2" id="text-org78bb53c">
 </div>
-<div id="outline-container-orgfd64c68" class="outline-3">
-<h3 id="orgfd64c68">Welche Gründe sprechen für den Einsatz von Lichtwellenleitern im Primärbereich?</h3>
-<div class="outline-text-3" id="text-orgfd64c68">
+<div id="outline-container-orga8594be" class="outline-3">
+<h3 id="orga8594be">Welche Gründe sprechen für den Einsatz von Lichtwellenleitern im Primärbereich?</h3>
+<div class="outline-text-3" id="text-orga8594be">
 <ul class="org-ul">
 <li>Überwindung großer Entfernungen</li>
 <li>Hohe Übertragungsraten</li>
@@ -719,9 +730,9 @@
 </div>
 </div>
 
-<div id="outline-container-org4f21ddd" class="outline-3">
-<h3 id="org4f21ddd">Wo liegen die Vorteile beim Einsatz von Lichtwellenleitern?</h3>
-<div class="outline-text-3" id="text-org4f21ddd">
+<div id="outline-container-orgdfc9e97" class="outline-3">
+<h3 id="orgdfc9e97">Wo liegen die Vorteile beim Einsatz von Lichtwellenleitern?</h3>
+<div class="outline-text-3" id="text-orgdfc9e97">
 <ul class="org-ul">
 <li>Überwindung von großen Entfernungen</li>
 <li>hohe Übertragungsraten</li>
@@ -731,9 +742,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgd553335" class="outline-3">
-<h3 id="orgd553335">Was versteht man unter einer Bedarfsverkabelung?</h3>
-<div class="outline-text-3" id="text-orgd553335">
+<div id="outline-container-org9d319ec" class="outline-3">
+<h3 id="org9d319ec">Was versteht man unter einer Bedarfsverkabelung?</h3>
+<div class="outline-text-3" id="text-org9d319ec">
 <p>
 Bei einer bedarfsorientierten Verkabelung bestimmt die Netztechnik die Art der Verkabelung (z.B. Analog-Telefon = 2-adriges Kabel,
 ISDN-Telefon = 4 - adriges Kabel, Netzwerk = 8 - adriges Kabel)
@@ -741,9 +752,9 @@ ISDN-Telefon = 4 - adriges Kabel, Netzwerk = 8 - adriges Kabel)
 </div>
 </div>
 
-<div id="outline-container-orgf8aa8e7" class="outline-3">
-<h3 id="orgf8aa8e7">Was wird im Wesentlichen in der Norm EN DIN 50173 spezifiziert?</h3>
-<div class="outline-text-3" id="text-orgf8aa8e7">
+<div id="outline-container-orgf5f40ce" class="outline-3">
+<h3 id="orgf5f40ce">Was wird im Wesentlichen in der Norm EN DIN 50173 spezifiziert?</h3>
+<div class="outline-text-3" id="text-orgf5f40ce">
 <ul class="org-ul">
 <li>Struktur eines Gebäudeverkabelungssystems</li>
 <li>Anforderungen an Kabel, Dosen und Komponenten</li>
@@ -752,9 +763,9 @@ ISDN-Telefon = 4 - adriges Kabel, Netzwerk = 8 - adriges Kabel)
 </div>
 </div>
 
-<div id="outline-container-orgf71e4a2" class="outline-3">
-<h3 id="orgf71e4a2">Welche Bereiche werden bei der strukturierten Verkabelung unterschieden?</h3>
-<div class="outline-text-3" id="text-orgf71e4a2">
+<div id="outline-container-orgb20f55b" class="outline-3">
+<h3 id="orgb20f55b">Welche Bereiche werden bei der strukturierten Verkabelung unterschieden?</h3>
+<div class="outline-text-3" id="text-orgb20f55b">
 <ul class="org-ul">
 <li>Primär, Campus Backbone, gebäudeübergreifender Bereich</li>
 <li>Sekundär, Building Backbone, Steigleitungsbereich (vertikal)</li>
@@ -763,18 +774,18 @@ ISDN-Telefon = 4 - adriges Kabel, Netzwerk = 8 - adriges Kabel)
 </div>
 </div>
 
-<div id="outline-container-org593498e" class="outline-3">
-<h3 id="org593498e">Was versteht man unter einer universellen Gebäudeverkabelung?</h3>
-<div class="outline-text-3" id="text-org593498e">
+<div id="outline-container-orgc283032" class="outline-3">
+<h3 id="orgc283032">Was versteht man unter einer universellen Gebäudeverkabelung?</h3>
+<div class="outline-text-3" id="text-orgc283032">
 <p>
 Die universelle Gebäudeverkabelung definiert ein Konzept mit anwendungsneutralen Kommunikationskabeln.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf39cd14" class="outline-3">
-<h3 id="orgf39cd14">Bei der Etagenverteilung spricht man von "Channel Link" und "Permanent Link". Was wird hier unterschieden?</h3>
-<div class="outline-text-3" id="text-orgf39cd14">
+<div id="outline-container-org92c3031" class="outline-3">
+<h3 id="org92c3031">Bei der Etagenverteilung spricht man von "Channel Link" und "Permanent Link". Was wird hier unterschieden?</h3>
+<div class="outline-text-3" id="text-org92c3031">
 <p>
 Channel Link = gesamte Übertragungsstrecke (= Installationsstrecke + Patchkabel &lt;= 100 m)
 </p>
@@ -785,9 +796,9 @@ Permanent Link = Installationsstrecke (Wanddose &harr; Patchfeld &lt;= 90 m)
 </div>
 </div>
 
-<div id="outline-container-org7764a2c" class="outline-3">
-<h3 id="org7764a2c">Man unterscheidet in der Netzwerktechnik passive und aktive Komponenten. Was sind passive und aktive Komponenten?</h3>
-<div class="outline-text-3" id="text-org7764a2c">
+<div id="outline-container-org46324c4" class="outline-3">
+<h3 id="org46324c4">Man unterscheidet in der Netzwerktechnik passive und aktive Komponenten. Was sind passive und aktive Komponenten?</h3>
+<div class="outline-text-3" id="text-org46324c4">
 <ul class="org-ul">
 <li>passiv: Netzwerkkabel, Anschlussdosen, Patchfelder, Netzwerkschränke, Stecker, usw.</li>
 <li>aktiv: Komponenten, die in die Signalübertragung eingreifen, besitzen elektronische Schaltkreise.</li>
@@ -795,9 +806,9 @@ Permanent Link = Installationsstrecke (Wanddose &harr; Patchfeld &lt;= 90 m)
 </div>
 </div>
 
-<div id="outline-container-orge743420" class="outline-3">
-<h3 id="orge743420">Welche Anforderungen werden an eine universelle Gebäudeverkabelung gestellt?</h3>
-<div class="outline-text-3" id="text-orge743420">
+<div id="outline-container-org9691cd0" class="outline-3">
+<h3 id="org9691cd0">Welche Anforderungen werden an eine universelle Gebäudeverkabelung gestellt?</h3>
+<div class="outline-text-3" id="text-org9691cd0">
 <ul class="org-ul">
 <li>Dienste-Neutralität (Verwendung gängiger Standards für Sprache und Daten)</li>
 <li>Investitionsschutz (Unterstützung zukünftiger Kommunikationstechniken)</li>
@@ -807,9 +818,9 @@ Permanent Link = Installationsstrecke (Wanddose &harr; Patchfeld &lt;= 90 m)
 </div>
 </div>
 
-<div id="outline-container-orgcb6e4cc" class="outline-3">
-<h3 id="orgcb6e4cc">Bei Glasfaserverbindungen spricht man von einem konstanten Bandbreiten-Längenprodukt. Was ist darunter zu verstehen?</h3>
-<div class="outline-text-3" id="text-orgcb6e4cc">
+<div id="outline-container-orga85edcc" class="outline-3">
+<h3 id="orga85edcc">Bei Glasfaserverbindungen spricht man von einem konstanten Bandbreiten-Längenprodukt. Was ist darunter zu verstehen?</h3>
+<div class="outline-text-3" id="text-orga85edcc">
 <p>
 Es ist eine wichtige Kenngröße bei Lichtwellenleitern
 </p>
@@ -820,9 +831,9 @@ Das Bandbreiten-Längenprodukt ist das Produkt aus der maximalen Bandbreite und 
 </div>
 </div>
 
-<div id="outline-container-org3d16652" class="outline-3">
-<h3 id="org3d16652">Welche verschiedenen Kategorien von Lichtwellenleitern können unterschieden werden?</h3>
-<div class="outline-text-3" id="text-org3d16652">
+<div id="outline-container-org6848932" class="outline-3">
+<h3 id="org6848932">Welche verschiedenen Kategorien von Lichtwellenleitern können unterschieden werden?</h3>
+<div class="outline-text-3" id="text-org6848932">
 <ul class="org-ul">
 <li>Singlemode-Fasern</li>
 <li>Multimode-Faser (Stufenindex-Faser)</li>
@@ -832,13 +843,13 @@ Das Bandbreiten-Längenprodukt ist das Produkt aus der maximalen Bandbreite und 
 </div>
 </div>
 
-<div id="outline-container-org8e1b236" class="outline-2">
-<h2 id="org8e1b236">IT-Mathe</h2>
-<div class="outline-text-2" id="text-org8e1b236">
+<div id="outline-container-org194fd98" class="outline-2">
+<h2 id="org194fd98">IT-Mathe</h2>
+<div class="outline-text-2" id="text-org194fd98">
 </div>
-<div id="outline-container-org2481457" class="outline-3">
-<h3 id="org2481457">Textaufgaben Lösung</h3>
-<div class="outline-text-3" id="text-org2481457">
+<div id="outline-container-orgc77fdd5" class="outline-3">
+<h3 id="orgc77fdd5">Textaufgaben Lösung</h3>
+<div class="outline-text-3" id="text-orgc77fdd5">
 <ol class="org-ol">
 <li>Sie müssen Ihr Datenarchiv von 4 TiB (16mal 256-GiB-Platten) aus Sicherheitsgründen von der Berufsakademie ins Forschungszentrum auslagern. Sie können dies entweder durch Transport der sechzehn Platten mit dem Auto bewerkstelligen, wobei Sie die 10,1 km in 12 min. zurücklegen, oder Sie können die Daten per Datennetz auf einer Glasfaser-Direktverbindung von 8,1 km Länge übertragen, die mit einer Transferrate von 5 Gbit/s betrieben wird. Welche Transferrate erreichen Sie mit dem Auto? Wie lange dauert die Übertragung auf der Glasfaser-Direktverbindung? Welche Variante bevorzugen Sie?</li>
 </ol>
@@ -903,9 +914,9 @@ die Farbauflösung beibehalten wird?
 </div>
 </div>
 
-<div id="outline-container-org0b90268" class="outline-3">
-<h3 id="org0b90268">Einheiten Tabelle</h3>
-<div class="outline-text-3" id="text-org0b90268">
+<div id="outline-container-org27a0ec0" class="outline-3">
+<h3 id="org27a0ec0">Einheiten Tabelle</h3>
+<div class="outline-text-3" id="text-org27a0ec0">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1007,9 +1018,9 @@ die Farbauflösung beibehalten wird?
 </table>
 </div>
 
-<div id="outline-container-org8fed26a" class="outline-4">
-<h4 id="org8fed26a">Zahlen bis 31 in dual dezimal und hexadezimal</h4>
-<div class="outline-text-4" id="text-org8fed26a">
+<div id="outline-container-orgab84d99" class="outline-4">
+<h4 id="orgab84d99">Zahlen bis 31 in dual dezimal und hexadezimal</h4>
+<div class="outline-text-4" id="text-orgab84d99">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -1224,9 +1235,9 @@ die Farbauflösung beibehalten wird?
 </div>
 </div>
 
-<div id="outline-container-org08450f6" class="outline-4">
-<h4 id="org08450f6">Dezimalzahl in Binärzahl umwandeln</h4>
-<div class="outline-text-4" id="text-org08450f6">
+<div id="outline-container-org0e98ca5" class="outline-4">
+<h4 id="org0e98ca5">Dezimalzahl in Binärzahl umwandeln</h4>
+<div class="outline-text-4" id="text-org0e98ca5">
 <ol class="org-ol">
 <li>Die Zahl durch 2 dividieren</li>
 <li>Den Rest der Division notieren</li>
